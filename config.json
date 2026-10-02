@@ -1,0 +1,29 @@
+{
+	"app": {
+		"id": "micheckhash",
+		"name": "MiCheckHash",
+		"version": "8.0.0",
+		"width": 800,
+		"height": 600,
+		"resizable": true,
+		"frame": true,
+		"hide": false,
+		"icon": "micheckhash.png",
+		"disableAccelerationHardware": true,
+		"author": {
+			"name": "Murilo Gomes",
+			"email": "profmugomes@gmail.com",
+			"url": "https://www.profmugomes.com.br"
+		},
+		"homepage": "https://github.com/profmugomes/miphant/",
+		"license": "SEE LICENSE IN LICENSE.md",
+		"copyright": "Copyright (C) 2024-2026 Murilo Gomes <profmugomes.com.br>"
+	},
+	"server": {
+		"router": true
+	},
+	"dev": {
+		"menu": true,
+		"tools": false
+	}
+}

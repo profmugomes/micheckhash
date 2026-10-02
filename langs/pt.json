@@ -1,0 +1,20 @@
+{
+    "Continue": "Continuar",
+    "Cancel": "Cancelar",
+    "See license": "Ver licença",
+    "Unhandled exception:": "Exceção não tratada:",
+    "Unable to find file %s": "Não foi possível encontrar o arquivo %s",
+    "Error reading JSON file": "Erro ao ler arquivo JSON",
+    "Error starting the server:": "Erro ao iniciar o servidor:",
+    "Server has been started successfully.": "O servidor foi iniciado com sucesso.",
+    "Dev": "Dev",
+    "Refresh": "Atualizar",
+    "Tools": "Ferramentas",
+    "Cut": "Recortar",
+    "Copy": "Copiar",
+    "Paste": "Colar",
+    "Select All": "Selecionar tudo",
+    "About": "Sobre",
+    "Support MiCheckHash": "Apoie MiCheckHash",
+    "About MiCheckHash": "Sobre MiCheckHash"
+}
