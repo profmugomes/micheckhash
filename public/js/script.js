@@ -16,9 +16,9 @@ function post(url, data, callback) {
     xhr.send(data);
 }
 
-const sArquivo = document.getElementById('txtArquivo');
-sArquivo.addEventListener('click', async () => {
-    sArquivo.value = await miphant.openFile();
+const btnArquivo = document.getElementById('btnArquivo');
+btnArquivo.addEventListener('click', async () => {
+    document.getElementById('txtArquivo').value = await miphant.openFile();
 });
 
 async function checkHash() {
