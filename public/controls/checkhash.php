@@ -6,8 +6,6 @@
 
 declare(strict_types=1);
 
-use MiPhantLibs\system\exec;
-
 require_once(dirname(__DIR__) . '/vendor/autoload.php');
 require_once(__DIR__ . '/hash.php');
 
@@ -45,26 +43,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $txtHash = trim($_POST['txtHash'] ?? '');
 
     if (!strposa($txtTipo, ['md5', 'sha1', 'sha256', 'sha512'])) {
-        exit('Tipo de Hash não encontrado!');
+        exit('<div class="alert error">Tipo de Hash não encontrado!</div>');
     }
 
     if (!validarAlfanumerico($txtHash)) {
-        exit('Hash informado incorretamente!');
+        exit('<div class="alert error">Hash informado incorretamente!</div>');
     }
 
     if (!$txtArquivo) {
-        exit('Arquivo inválido!');
+        exit('<div class="alert error">Arquivo inválido!</div>');
     }
 
-   $sHash = getHash($txtTipo, $txtArquivo);
+    $sHash = getHash($txtTipo, $txtArquivo);
 
     if (isset($sHash)) {
         if ($txtHash == $sHash) {
-            echo 'Hash Correto!';
+            echo '<div class="alert success">Hash Correto!</div>';
         } else {
-            echo 'Hash Incorreto!';
+            echo '<div class="alert error">Hash Incorreto!</div>';
         }
     } else {
-        echo 'Hash Incorreto!';
+        echo '<div class="alert error">Hash Incorreto!</div>';
     }
 }
