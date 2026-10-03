@@ -10,7 +10,7 @@ use MiPhantLibs\system\exec;
 
 function getHash(string $txtTipo, string $txtArquivo): string
 {
-    $comando = $txtTipo . 'sum "' . $txtArquivo . '"';
+    $comando = $txtTipo . 'sum ' . $txtArquivo;
 
     $exec = new exec();
     $exec->command($comando)->run();
