@@ -8,7 +8,7 @@ function post(url, data, callback) {
     xhr.open('POST', url, true);
 
     xhr.onreadystatechange = function() {
-      if (this.status == 200) {
+      if (this.readyState === 4 && this.status == 200) {
         callback(this.responseText);
       }  
     };
@@ -20,16 +20,3 @@ const btnArquivo = document.getElementById('btnArquivo');
 btnArquivo.addEventListener('click', async () => {
     document.getElementById('txtArquivo').value = await miphant.openFile();
 });
-
-async function checkHash() {
-    let formData = new FormData();
-    formData.append('txtTipo', document.getElementById('txtTipoHash').value);
-    formData.append('txtArquivo', document.getElementById('txtArquivo').value);
-    formData.append('txtHash', document.getElementById('txtHash').value);
-
-    document.getElementById('resultado').innerHTML = 'Verificar hash...';
-
-    await post('/checkhash', formData, function(response) {
-        document.getElementById('resultado').innerHTML = response;
-    });
-}
