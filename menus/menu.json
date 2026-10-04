@@ -1,4 +1,13 @@
 {
+    "Ferramentas": {
+        "Gerar Hash": {
+            "page": "/gerarhash/",
+            "newwindow": true,
+            "width": 712,
+            "height": 452,
+            "resizable": false
+        }
+    },
     "About": {
         "Support MiCheckHash": {
             "url": "https://github.com/sponsors/profmugomes"
