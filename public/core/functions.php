@@ -1,4 +1,9 @@
 <?php
+// Copyright (c) 2024-2026 Murilo Gomes <profmugomes.com.br>. All Rights Reserved. (https://profmugomes.com.br)
+
+// Licensed under the PolyForm Perimeter License 1.0.1.
+// See LICENSE.md for details.
+
 function strposa(string $value, mixed $keywords): bool
 {
     if (!is_array($keywords)) {
