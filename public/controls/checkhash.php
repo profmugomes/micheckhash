@@ -6,36 +6,11 @@
 
 declare(strict_types=1);
 
-require_once(dirname(__DIR__) . '/vendor/autoload.php');
-require_once(__DIR__ . '/hash.php');
+$dirPublic = dirname(__DIR__);
 
-function strposa(string $value, mixed $keywords): bool
-{
-    if (!is_array($keywords)) {
-        $keywords = [$keywords];
-    }
-
-    foreach ($keywords as $query) {
-        if (strpos($value, $query, 0) !== false) {
-            return true; // stop on first true result
-        }
-    }
-    return false;
-}
-
-function protegerArquivo(string $arquivo): string|false
-{
-    if ($arquivo === '' || !is_file($arquivo)) {
-        return false;
-    }
-
-    return escapeshellarg($arquivo);
-}
-
-function validarAlfanumerico(string $valor): bool
-{
-    return preg_match('/\A[a-zA-Z0-9]+\z/', $valor) === 1;
-}
+require_once($dirPublic . '/vendor/autoload.php');
+require_once($dirPublic . '/core/hash.php');
+require_once($dirPublic . '/core/functions.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $txtTipo = trim($_POST['txtTipo'] ?? '');
@@ -55,13 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $sHash = getHash($txtTipo, $txtArquivo);
-
-    if (isset($sHash)) {
-        if ($txtHash == $sHash) {
-            echo '<div class="alert success">Hash Correto!</div>';
-        } else {
-            echo '<div class="alert error">Hash Incorreto!</div>';
-        }
+ 
+    if ($txtHash == $sHash) {
+        echo '<div class="alert success">Hash Correto!</div>';
     } else {
         echo '<div class="alert error">Hash Incorreto!</div>';
     }
