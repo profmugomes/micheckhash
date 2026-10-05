@@ -17,7 +17,7 @@
 		},
 		"homepage": "https://github.com/profmugomes/miphant/",
 		"license": "SEE LICENSE IN LICENSE.md",
-		"copyright": "Copyright (C) 2024-2026 Murilo Gomes <profmugomes.com.br>"
+		"copyright": "Copyright (C) 2024-2026 Murilo Gomes <profmugomes.com.br>. Todos os direitos reservados."
 	},
 	"server": {
 		"router": true
