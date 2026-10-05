@@ -82,6 +82,10 @@ select:focus {
     cursor: pointer;
 }
 
+.input-action #btnSave {
+    width: 72px;
+}
+
 .input-action button:hover {
     background: #e9ecf0;
 }
