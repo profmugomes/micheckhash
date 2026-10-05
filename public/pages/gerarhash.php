@@ -3,9 +3,13 @@
 
 // Licensed under the PolyForm Perimeter License 1.0.1.
 // See LICENSE.md for details.
+
+use MiPhantLibs\system\env;
+
+$env = new env();
 ?>
 <!DOCTYPE html>
-<html lang="<?= $_ENV['MIPHANT_LANG']; ?>">
+<html lang="<?= $env->lang(); ?>">
 
 <head>
     <meta charset="UTF-8">
