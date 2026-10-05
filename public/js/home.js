@@ -3,12 +3,14 @@
 // Licensed under the PolyForm Perimeter License 1.0.1.
 // See LICENSE.md for details.
 
-const checkHash = document.getElementById('checkHash');
-checkHash.addEventListener('click', async () => {
+const btnCheckHash = document.getElementById('btnCheckHash');
+btnCheckHash.addEventListener('click', async () => {
     let formData = new FormData();
     formData.append('txtTipo', document.getElementById('txtTipoHash').value);
     formData.append('txtArquivo', document.getElementById('txtArquivo').value);
     formData.append('txtHash', document.getElementById('txtHash').value);
+
+    btnCheckHash.setAttribute('disabled', 'disabled');
 
     document.getElementById('resultado').innerHTML = 'Verificar hash...';
 
@@ -17,4 +19,6 @@ checkHash.addEventListener('click', async () => {
             document.getElementById('resultado').innerHTML = response;
         }
     });
+
+    btnCheckHash.removeAttribute('disabled');
 });
