@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 $dirPublic = dirname(__DIR__);
 
-require_once($dirPublic . '/vendor/autoload.php');
 require_once($dirPublic . '/core/hash.php');
 require_once($dirPublic . '/core/functions.php');
 
