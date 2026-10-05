@@ -11,10 +11,14 @@ btnGerar.addEventListener('click', async () => {
 
     document.getElementById('resultado').innerHTML = 'Gerar hash...';
 
+    btnGerar.setAttribute('disabled', 'disabled');
+
     await post('/gerarhash/start', formData, function (response) {
         document.getElementById('txtHash').value = response;
         document.getElementById('resultado').innerHTML = '';
     });
+
+    btnGerar.removeAttribute('disabled');
 });
 
 const btnSave = document.getElementById('btnSave');
@@ -26,6 +30,8 @@ btnSave.addEventListener('click', async () => {
 
     document.getElementById('resultado').innerHTML = 'Salvando hash...';
 
+    btnGerar.setAttribute('disabled', 'disabled');
+
     await post('/gerarhash/save', formData, function (response) {
         if (response) {
             miphant.alert('MiCheckHash', response, 'info', 'Continuar');
@@ -33,4 +39,6 @@ btnSave.addEventListener('click', async () => {
 
         document.getElementById('resultado').innerHTML = '';
     });
+
+    btnGerar.removeAttribute('disabled');
 });
