@@ -8,12 +8,11 @@ declare(strict_types=1);
 
 $dirPublic = dirname(__DIR__);
 
-require_once($dirPublic . '/vendor/autoload.php');
 require_once($dirPublic . '/core/functions.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $txtTipo = trim($_POST['txtTipo'] ?? '');
-    $txtArquivo = protegerArquivo(trim($_POST['txtArquivo'] ?? ''), false);
+    $txtArquivo = protegerArquivo(trim($_POST['txtArquivo'] ?? ''));
     $txtHash = trim($_POST['txtHash'] ?? '');
 
     if (!strposa($txtTipo, ['md5', 'sha1', 'sha256', 'sha512'])) {
