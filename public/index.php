@@ -13,18 +13,22 @@ $rt = new router();
 $rt->get(['/', '/home'], function() {
     require_once(__DIR__ . '/pages/home.php');
 });
-$rt->get(['/checkhash'], function() {
+$rt->get('/checkhash', function() {
     require_once(__DIR__ . '/controls/checkhash.php');
 });
 
-$rt->get(['/gerarhash'], function() {
+$rt->get('/gerarhash', function() {
     require_once(__DIR__ . '/pages/gerarhash.php');
 });
-$rt->get(['/gerarhash/start'], function() {
+$rt->get('/gerarhash/start', function() {
     require_once(__DIR__ . '/controls/gerarhash.php');
 });
-$rt->get(['/gerarhash/save'], function() {
+$rt->get('/gerarhash/save', function() {
     require_once(__DIR__ . '/controls/savehash.php');
+});
+
+$rt->get('/about', function() {
+    require_once(__DIR__ . '/pages/about.php');
 });
 
 if ($rt->noPHP()) {
