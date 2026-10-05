@@ -14,7 +14,11 @@
         },
         "separator1": {},
         "About MiCheckHash": {
-            "url": "https://github.com/profmugomes/micheckhash"
+            "page": "/about/",
+            "newwindow": true,
+            "width": 600,
+            "height": 557,
+            "resizable": false
         }
     }
 }
