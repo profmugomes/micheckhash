@@ -46,8 +46,11 @@ $env = new env();
                 <input id="txtHash" type="text">
             </div>
 
-            <button id="btnCheckHash" type="button" class="button">Verificar</button>
+            <progress id="progressHash" value="0" max="100"></progress>
+            <div id="info" class="result"></div>
 
+            <button id="btnCheckHash" type="button" class="button">Verificar</button>
+            
             <div id="resultado" class="result"></div>
         </section>
     </main>
