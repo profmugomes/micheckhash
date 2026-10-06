@@ -43,9 +43,11 @@ $env = new env();
 
             <button id="btnGerar" type="button" class="button">Gerar</button>
 
+            <progress id="progressHash" value="0" max="100"></progress>
+            
             <div id="resultado" class="result"></div>
 
-            <div class="form-group">
+            <div id="pnlHash" class="form-group">
                 <label for="txtHash">Hash</label>
 
                 <div class="input-action">
