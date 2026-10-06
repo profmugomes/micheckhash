@@ -4,18 +4,34 @@
 // See LICENSE.md for details.
 
 const btnGerar = document.getElementById('btnGerar');
+const progressHash = document.getElementById('progressHash');
+const pnlHash = document.getElementById('pnlHash');
+
+progressHash.style.display = 'none';
+pnlHash.style.display = 'none';
+
 btnGerar.addEventListener('click', async () => {
     let formData = new FormData();
     formData.append('txtTipo', document.getElementById('txtTipoHash').value);
     formData.append('txtArquivo', document.getElementById('txtArquivo').value);
 
-    document.getElementById('resultado').innerHTML = 'Gerar hash...';
+    document.getElementById('resultado').innerHTML = '<div class="alert success">Gerar hash...</div>';
 
     btnGerar.setAttribute('disabled', 'disabled');
 
+    progressHash.style.display = 'block';
+    pnlHash.style.display = 'none';
+
     await post('/gerarhash/start', formData, function (response) {
-        document.getElementById('txtHash').value = response;
+        if (response) {
+            document.getElementById('txtHash').value = response;
+        }
+        
         document.getElementById('resultado').innerHTML = '';
+        progressHash.value = 0;
+
+        progressHash.style.display = 'none';
+        pnlHash.style.display = 'block';
     });
 
     btnGerar.removeAttribute('disabled');
