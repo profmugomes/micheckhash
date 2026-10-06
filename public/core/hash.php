@@ -12,16 +12,44 @@ function getHash(string $txtTipo, string $txtArquivo): string
         return '';
     }
 
+    $total = filesize($txtArquivo);
+
+    echo 'TOTAL:' . $total . '|';
+
+    if (ob_get_level() > 0) {
+        ob_flush();
+    }
+
+    flush();
+
     $ctx = hash_init($txtTipo);
-    
+
     $file = fopen($txtArquivo, 'rb');
+
     if (!$file) {
         return '';
     }
 
+    $processado = 0;
+
     while (!feof($file)) {
         $buffer = fread($file, 1048576);
+
+        if ($buffer === false || $buffer === '') {
+            break;
+        }
+
         hash_update($ctx, $buffer);
+
+        $processado += strlen($buffer);
+
+        echo 'PROGRESS:' . $processado . '|';
+
+        if (ob_get_level() > 0) {
+            ob_flush();
+        }
+
+        flush();
     }
 
     fclose($file);
