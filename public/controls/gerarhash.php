@@ -5,6 +5,7 @@
 // See LICENSE.md for details.
 
 declare(strict_types=1);
+ob_implicit_flush(true);
 
 $dirPublic = dirname(__DIR__);
 
@@ -16,11 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $txtArquivo = protegerArquivo(trim($_POST['txtArquivo'] ?? ''));
 
     if (!strposa($txtTipo, ['md5', 'sha1', 'sha256', 'sha512'])) {
-        exit('<div class="alert error">Tipo de Hash não encontrado!</div>');
+        exit('Tipo de Hash não encontrado!');
     }
 
     if (!$txtArquivo) {
-        exit('<div class="alert error">Arquivo inválido!</div>');
+        exit('Arquivo inválido!');
     }
 
     echo getHash($txtTipo, $txtArquivo);
