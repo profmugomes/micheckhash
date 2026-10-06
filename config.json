@@ -23,7 +23,7 @@
 		"router": true
 	},
 	"dev": {
-		"menu": true,
+		"menu": false,
 		"tools": false
 	}
 }
