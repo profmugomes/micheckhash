@@ -5,6 +5,7 @@
 // See LICENSE.md for details.
 
 declare(strict_types=1);
+ob_implicit_flush(true);
 
 $dirPublic = dirname(__DIR__);
 
@@ -20,16 +21,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit('<div class="alert error">Tipo de Hash não encontrado!</div>');
     }
 
-    if (!validarAlfanumerico($txtHash)) {
-        exit('<div class="alert error">Hash informado incorretamente!</div>');
-    }
-
     if (!$txtArquivo) {
         exit('<div class="alert error">Arquivo inválido!</div>');
     }
 
+    if (!validarAlfanumerico($txtHash)) {
+        exit('<div class="alert error">Hash informado incorretamente!</div>');
+    }
+
     $sHash = getHash($txtTipo, $txtArquivo);
- 
+
     if ($txtHash == $sHash) {
         echo '<div class="alert success">Hash Correto!</div>';
     } else {
