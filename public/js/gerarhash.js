@@ -15,7 +15,7 @@ btnGerar.addEventListener('click', async () => {
     formData.append('txtTipo', document.getElementById('txtTipoHash').value);
     formData.append('txtArquivo', document.getElementById('txtArquivo').value);
 
-    document.getElementById('resultado').innerHTML = '<div class="alert success">Gerar hash...</div>';
+    document.getElementById('resultado').innerHTML = '<div class="alert success">' + await miphant.translate('Generating Hash...') + '</div>';
 
     btnGerar.setAttribute('disabled', 'disabled');
 
@@ -44,13 +44,13 @@ btnSave.addEventListener('click', async () => {
     formData.append('txtArquivo', document.getElementById('txtArquivo').value);
     formData.append('txtHash', document.getElementById('txtHash').value);
 
-    document.getElementById('resultado').innerHTML = 'Salvando hash...';
+    document.getElementById('resultado').innerHTML = await miphant.translate('Saving hash...');
 
     btnGerar.setAttribute('disabled', 'disabled');
 
-    await post('/gerarhash/save', formData, function (response) {
+    await post('/gerarhash/save', formData, async function (response) {
         if (response) {
-            miphant.alert('MiCheckHash', response, 'info', 'Continuar');
+            miphant.alert('MiCheckHash', response, 'info', await miphant.translate('Continue'));
         }
 
         document.getElementById('resultado').innerHTML = '';
