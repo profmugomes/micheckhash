@@ -11,7 +11,7 @@ $env = new env();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre MiCheckHash</title>
+    <title>About MiCheckHash</title>
     <link rel="stylesheet" href="/css/style-about.css">
 </head>
 
