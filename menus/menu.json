@@ -1,6 +1,6 @@
 {
-    "Ferramentas": {
-        "Gerar Hash": {
+    "Tools": {
+        "Generate Hash": {
             "page": "/gerarhash/",
             "newwindow": true,
             "width": 712,
