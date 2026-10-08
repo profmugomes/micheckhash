@@ -5,6 +5,9 @@
 // See LICENSE.md for details.
 
 declare(strict_types=1);
+
+use MiPhantLibs\langs\translate;
+
 ob_implicit_flush(true);
 
 $dirPublic = dirname(__DIR__);
@@ -12,28 +15,30 @@ $dirPublic = dirname(__DIR__);
 require_once($dirPublic . '/core/hash.php');
 require_once($dirPublic . '/core/functions.php');
 
+$translate = new translate();
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $txtTipo = trim($_POST['txtTipo'] ?? '');
     $txtArquivo = protegerArquivo(trim($_POST['txtArquivo'] ?? ''));
     $txtHash = trim($_POST['txtHash'] ?? '');
 
     if (!strposa($txtTipo, ['md5', 'sha1', 'sha256', 'sha512'])) {
-        exit('<div class="alert error">Tipo de Hash não encontrado!</div>');
+        exit('<div class="alert error">' .  $translate->get('Hash type not found!') . '</div>');
     }
 
     if (!$txtArquivo) {
-        exit('<div class="alert error">Arquivo inválido!</div>');
+        exit('<div class="alert error">' . $translate->get('Invalid file!') . '</div>');
     }
 
     if (!validarAlfanumerico($txtHash)) {
-        exit('<div class="alert error">Hash informado incorretamente!</div>');
+        exit('<div class="alert error">' . $translate->get('Incorrect hash provided!') . '</div>');
     }
 
     $sHash = getHash($txtTipo, $txtArquivo);
 
     if ($txtHash == $sHash) {
-        echo '<div class="alert success">Hash Correto!</div>';
+        echo '<div class="alert success">' . $translate->get('Correct Hash!') . '</div>';
     } else {
-        echo '<div class="alert error">Hash Incorreto!</div>';
+        echo '<div class="alert error">' . $translate->get('Incorrect Hash!') . '</div>';
     }
 }

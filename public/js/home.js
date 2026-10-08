@@ -16,7 +16,7 @@ btnCheckHash.addEventListener('click', async () => {
 
     btnCheckHash.style.display = 'none';
 
-    document.getElementById('info').innerHTML = '<div class="alert success">Verificar hash...</div>';
+    document.getElementById('info').innerHTML = '<div class="alert success">' + await miphant.translate('Verifying hash...') + '</div>';
     document.getElementById('resultado').innerHTML = '';
 
     progressHash.style.display = 'block';

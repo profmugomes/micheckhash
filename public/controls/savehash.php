@@ -6,6 +6,8 @@
 
 declare(strict_types=1);
 
+use MiPhantLibs\langs\translate;
+
 $dirPublic = dirname(__DIR__);
 
 require_once($dirPublic . '/core/functions.php');
@@ -14,22 +16,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $txtTipo = trim($_POST['txtTipo'] ?? '');
     $txtArquivo = protegerArquivo(trim($_POST['txtArquivo'] ?? ''));
     $txtHash = trim($_POST['txtHash'] ?? '');
+    $translate = new translate();
 
     if (!strposa($txtTipo, ['md5', 'sha1', 'sha256', 'sha512'])) {
-        exit('Tipo de Hash não encontrado!');
+        exit($translate->get('Hash type not found!'));
     }
 
     if (!validarAlfanumerico($txtHash)) {
-        exit('Hash informado incorretamente!');
+        exit($translate->get('Incorrect hash provided!'));
     }
 
     if (!$txtArquivo) {
-        exit('Arquivo inválido!');
+        exit($translate->get('Invalid file!'));
     }
 
     if (file_put_contents($txtArquivo . '.' . $txtTipo, sprintf('%s %s', $txtHash, basename($txtArquivo)))) {
-        echo 'Arquivo salvo com sucesso!';
+        echo $translate->get('File saved successfully!');
     } else {
-        echo 'Ocorreu um problema ao tentar salvar o arquivo!';
+        echo $translate->get('An error occurred while trying to save the file!');
     }
 }

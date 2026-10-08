@@ -4,9 +4,11 @@
 // Licensed under the PolyForm Perimeter License 1.0.1.
 // See LICENSE.md for details.
 
+use MiPhantLibs\langs\translate;
 use MiPhantLibs\system\env;
 
 $env = new env();
+$translate = new translate();
 ?>
 <!DOCTYPE html>
 <html lang="<?= $env->lang(); ?>">
@@ -14,7 +16,7 @@ $env = new env();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerar Hash | MiCheckHash</title>
+    <title><?= $translate->get('Generate Hash'); ?> | MiCheckHash</title>
 
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -23,7 +25,7 @@ $env = new env();
     <main class="container">
         <section class="card">
             <div class="form-group">
-                <label for="txtTipoHash">Tipo do Hash</label>
+                <label for="txtTipoHash"><?= $translate->get('Hash Type'); ?></label>
                 <select id="txtTipoHash">
                     <option value="md5">MD5</option>
                     <option value="sha1">SHA1</option>
@@ -33,7 +35,7 @@ $env = new env();
             </div>
 
             <div class="form-group">
-                <label for="txtArquivo">Selecione um Arquivo</label>
+                <label for="txtArquivo"><?= $translate->get('Select File'); ?></label>
 
                 <div class="input-action">
                     <input id="txtArquivo" type="text" readonly>
@@ -41,7 +43,7 @@ $env = new env();
                 </div>
             </div>
 
-            <button id="btnGerar" type="button" class="button">Gerar</button>
+            <button id="btnGerar" type="button" class="button"><?= $translate->get('Generate'); ?></button>
 
             <progress id="progressHash" value="0" max="100"></progress>
             
@@ -52,7 +54,7 @@ $env = new env();
 
                 <div class="input-action">
                     <input id="txtHash" type="text" readonly>
-                    <button id="btnSave" type="button">Salvar</button>
+                    <button id="btnSave" type="button"><?= $translate->get('Save'); ?></button>
                 </div>
             </div>
         </section>
