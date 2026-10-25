@@ -1,7 +1,5 @@
 # MiCheckHash
 
-[![License](https://img.shields.io/badge/license-GPL-2.0-only-5351FB)](LICENSE.md)
-
 MiCheckHash is a software for checking and generating file hashes.
 
 ## Information
