@@ -14,11 +14,6 @@ MiCheckHash is a software for checking and generating file hashes.
 
 - Ubuntu 26.04 or higher
 
-### Windows
-
-- Windows 10 or higher
-- Visual C++ Redistributable 14.42
-
 ## 👤 Autor
 
 **Murilo Gomes**
@@ -31,26 +26,10 @@ MiCheckHash is a software for checking and generating file hashes.
 
 ## License
 
-Copyright (c) 2024-2026 Murilo Gomes <profmugomes.com.br>. All Rights Reserved.
+The MiCheckHash is provided under:
 
-This project is licensed under the PolyForm Perimeter License 1.0.1.
+[SPDX-License-Identifier: GPL-2.0-only](https://spdx.org/licenses/GPL-2.0-only.html)
 
-### Summary
+Beign under the terms of the GNU General Public License version 2 only.
 
-This software is available for commercial and noncommercial use, subject to the terms of the PolyForm Perimeter License 1.0.1.
-
-You may:
-
-* ✔ Use the software for commercial and noncommercial purposes.
-* ✔ Inspect and study the source code.
-* ✔ Modify the software.
-* ✔ Create derivative works based on the software.
-* ✔ Redistribute the software and permitted modifications.
-
-You may not:
-
-* ✖ Provide a product that competes with the software.
-
-See the full license terms at LICENSE.md.
-
-This summary is provided for convenience only and does not replace or modify the full license terms.
+All contributions to the MiCheckHash are subject to this license.
