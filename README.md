@@ -1,7 +1,7 @@
 # MiCheckHash
 
 > [!NOTE]
-> A partir da versão 10, o MiCheckHash deixou de ser compatível com Windows, agora a nova versão é compatível exclusivamente com Linux Lubuntu, devendo funcionar na distro Ubuntu e distros baseados no Ubuntu.
+> A partir da versão 10, o MiCheckHash é compatível com Linux Lubuntu, devendo funcionar na distro Ubuntu e distros baseados no Ubuntu. O software não possui mais suporte para Windows.
 
 MiCheckHash é um software para verificar e gerar hash de arquivos, com suporte para MD5, SHA1, SHA256 e SHA512.
 
