@@ -1,0 +1,97 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: micheckhash 3.22.2\n"
+"PO-Revision-Date: 2026-10-25 17:18 UTC\n"
+"Last-Translator: profmugomes <profmugomes@gmail.com>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: FMain.form:34
+msgid "About"
+msgstr "Sobre"
+
+#: FAbout.form:17 FMain.form:44
+msgid "About MiCheckHash"
+msgstr "Sobre MiCheckHash"
+
+#: FMain.form:84
+msgid "Check"
+msgstr "Verificar"
+
+#: FMain.class:38
+msgid "Different!"
+msgstr "Diferente!"
+
+#: FGerarHash.form:41 FMain.form:69
+msgid "File"
+msgstr "Arquivo"
+
+#: FGerarHash.class:23 FMain.class:41
+msgid "File not found!"
+msgstr "Arquivo não encontrado!"
+
+#: FMain.class:27
+msgid "Fill in all fields before checking!"
+msgstr "Preencha todos os campos antes de verificar!"
+
+#: FGerarHash.class:14
+msgid "Fill in all fields before generating!"
+msgstr "Preencha todos os campos antes de gerar!"
+
+#: FGerarHash.form:46
+msgid "Generate"
+msgstr "Gerar"
+
+#: FGerarHash.form:16 FMain.form:29
+msgid "Generate Hash"
+msgstr "Gerar hash"
+
+#: FGerarHash.form:52
+msgid "Hash:"
+msgstr "Hash:"
+
+#: FMain.form:75
+msgid "Hash provided by the developer"
+msgstr "Hash fornecido pelo desenvolvedor"
+
+#: FGerarHash.class:42
+msgid "Hash saved successfully!"
+msgstr "Hash salvo com sucesso!"
+
+#: FGerarHash.form:23 FMain.form:51
+msgid "Hash Type"
+msgstr "Tipo de hash"
+
+# gb-ignore
+#: .project:1 FMain.form:21
+msgid "MiCheckHash"
+msgstr ""
+
+# gb-ignore
+#: .project:2
+msgid "MiCheckHash is a software for checking and generating file hashes.\nThe MICheckHash is under license GPL-2.0-only"
+msgstr ""
+
+#: FGerarHash.form:62
+msgid "Save"
+msgstr "Salvar"
+
+#: FGerarHash.class:31 FMain.class:55
+msgid "Select File"
+msgstr "Selecione o arquivo"
+
+#: FMain.class:36
+msgid "Success!"
+msgstr "Sucesso!"
+
+#: FMain.form:37
+msgid "Support MiCheckHash"
+msgstr "Apoie MiCheckHash"
+
+#: FMain.form:26
+msgid "Tools"
+msgstr "Ferramentas"
+

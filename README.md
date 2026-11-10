@@ -1,22 +1,20 @@
 # MiCheckHash
 
-MiCheckHash is a software for checking and generating file hashes.
+> [!NOTE]
+> A partir da versão 10, o MiCheckHash deixou de ser compatível com Windows, agora a nova versão é compatível exclusivamente com Linux Lubuntu, devendo funcionar na distro Ubuntu e distros baseados no Ubuntu.
 
-## Information
+MiCheckHash é um software para verificar e gerar hash de arquivos, com suporte para MD5, SHA1, SHA256 e SHA512.
 
- - [Repository MiCheckHash](https://github.com/profmugomes/micheckhash)
+## Informações
 
-## System Requirement
+ - [Repositório MiCheckHash](https://github.com/profmugomes/micheckhash)
+
+## Requerimento do Sistema
 
 ### Linux
 
-- Ubuntu 26.04 or higher
-- Graphics: GPU with OpenGL support (required for 3D acceleration)
-
-### Windows
-
-- Windows 10 or higher
-- Graphics: GPU with OpenGL support (required for 3D acceleration)
+- Lubuntu 26.04 ou superior
+- Dependencias do Gambas3
 
 ## 👤 Autor
 
