@@ -1,3 +1,7 @@
+* Sun Nov 15 2026 Murilo Gomes <profmugomes@gmail.com> 10.0.4
+- Alterado o bytecode para suportar o Ubuntu 24.04 LTS.
+- Adicionado informação da versão no Sobre.
+
 * Wed Nov 11 2026 Murilo Gomes <profmugomes@gmail.com> 10.0.3
 - Removido o gambas3-gb-gkt3-x11 para evitar incompatibilidade com a versão mais recente.
 
