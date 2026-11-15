@@ -13,8 +13,10 @@ MiCheckHash é um software para verificar e gerar hash de arquivos, com suporte 
 
 ### Linux
 
-- Lubuntu 26.04 ou superior
+- Lubuntu 24.04 ou superior
 - Dependencias do Gambas3
+
+No Lubuntu 24.04 requer o gambas3-gb-gtk3-x11 para funcionar.
 
 ## 👤 Autor
 
